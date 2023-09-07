@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Marvel";
+}
+.container {
+  padding: 20px 40px;
+  background-color: #2e93a1;
+  & .content {
+    & .movies-list {
+      display: flex;
+      background-color: #9c8e42;
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-content: center;
+      align-items: center;
+      background-color: #84c8e4;
+    }
+  }
+}
