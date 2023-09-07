@@ -15,22 +15,17 @@ const consultaMarvel = () => {
       moviesContainer.innerHTML = ""
       moviesList.forEach((moviesList) => {
         const moviesCard = document.createElement("div")
-        const movieName = document.createElement("p")
-        const moviesUrl= moviesList.urls
-        movieName.textContent = moviesList.title
-        moviesUrl.forEach((moviesUrl)=>{
-          const moviesUrls= document.createElement("p")
-          moviesUrls.textContent= moviesUrl.url
-          moviesCard.appendChild(moviesUrls)
-          moviesCard.appendChild(movieName)
-          moviesContainer.appendChild(moviesCard)
-          moviesList.forEach()
-        })
+        const movieStories= moviesList.stories.items    
+        movieStories.forEach((movieStories)=>{
+          const Storiesname= document.createElement("p")
+          Storiesname.textContent= movieStories.name
+          moviesCard.appendChild(Storiesname)
+          console.log(Storiesname)  
+        }) 
         
       });
 
     })
-
 
     .catch(error => {
       console.error("Error:", error);
