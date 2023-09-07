@@ -1,10 +1,6 @@
 const consultaMarvel = () => {
-  const apiUrl = "https://gateway.marvel.com/v1/public/series";
-  const apiKey = "65f08d74236aae47779473fd02b1f0d3";
-  const ts = "1";
-  const hash = "3c6fc4ce58ff953d1a65a8ee2de31037";
 
-  const url = `${apiUrl}?ts=${ts}&apikey=${apiKey}&hash=${hash}`;
+  const url = "http://gateway.marvel.com/v1/public/comics?ts=1&apikey=9aa560a9a861b89b42bb33af60c12977&hash=429255a25aa4af880c6f79f4bd2ddba2";
 
   fetch(url)
     .then((response) => response.json())
@@ -15,17 +11,27 @@ const consultaMarvel = () => {
       moviesContainer.innerHTML = ""
       moviesList.forEach((moviesList) => {
         const moviesCard = document.createElement("div")
-        const movieStories= moviesList.stories.items    
+        const movieStories= moviesList.stories.items
+        const movieCreators= moviesList.creators.items
         movieStories.forEach((movieStories)=>{
           const Storiesname= document.createElement("p")
           Storiesname.textContent= movieStories.name
           moviesCard.appendChild(Storiesname)
           console.log(Storiesname)  
         }) 
-        
+        movieCreators.forEach((movieCreators)=>{
+          const creatorsName = document.createElement("p")
+          creatorsName.textContent = movieCreators.name
+          moviesCard.appendChild(creatorsName)
+          console.log(creatorsName)
+        })
+                  
+        moviesContainer.appendChild(moviesCard)
+                                  
       });
 
     })
+
 
     .catch(error => {
       console.error("Error:", error);
