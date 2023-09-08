@@ -30,10 +30,11 @@ const consultaMarvel = () => {
         moviesTable.append(row)
 
       });
-
+      console.log("200")
     })
 
     .catch(error => {
-      console.error("Error:", error);
+
+      console.error("400:", error);
     });
 }
