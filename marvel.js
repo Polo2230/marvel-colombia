@@ -11,19 +11,17 @@ const consultaMarvel = () => {
         const title = document.createElement("td") 
         title.textContent = moviesList.title
         const movieStories= moviesList.stories.items
-        const movieCreators= moviesList.creators.items  
+        const movieCreators= moviesList.creators.items   
         movieStories.forEach((movieStories)=>{
           const Storiesname= document.createElement("td")
-          const Stories= movieStories.map(story=>story.name).join("-")
-          Storiesname.textContent = Stories
+          Storiesname.textContent= movieStories.name
           row.appendChild(Storiesname)
           console.log(Storiesname)  
         }) 
         movieCreators.forEach((movieCreators)=>{
-          const creators = document.createElement("td")
-          const creatorsName= movieCreators.map(creator => creator.name).join(' - ')
-          creators.textContent = creatorsName
-          row.appendChild(creators)
+          const creatorsName = document.createElement("td")
+          creatorsName.textContent = movieCreators.name
+          row.appendChild(creatorsName)
           console.log(creatorsName)
         })
         moviesTable.append(row)
