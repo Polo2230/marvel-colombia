@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
-    <title>Document</title>
+    <title>API DEPARTAMENTOS Y MARVEL</title>
 </head>
 
 <body>
@@ -17,8 +17,18 @@
             <button class = "btn-show-list" onclick="consultaMarvel()">
                 Mostrar Peliculas 
             </button>
-            <div class="movies-list">
-            </div>
+            <div class="movies-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>NOMBRE</th>
+                            <th>CREADORES</th>
+                            <th>STORIES</th>
+                        </tr>
+                    </thead>
+                    <tbody id="comicTable"></tbody>
+                </table>
+            </div>            
         </div>
     </div>
     
