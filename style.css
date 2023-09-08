@@ -5,10 +5,10 @@ body {
 }
 .container {
   padding: 20px 40px;
-  background-color: #2e93a1;
   & .content {
-    & .movies-list {
-      display: flex;
+    & .movies-table {
+      background-color: #84c8e4;
+      display:D=flex;
       background-color: #9c8e42;
       flex-direction: row;
       flex-wrap: wrap;
