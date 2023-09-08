@@ -1,20 +1,67 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Marvel";
+  font-family: "Marvel", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: black;
 }
+
 .container {
-  padding: 20px 40px;
-  & .content {
-    & .movies-table {
-      background-color: #84c8e4;
-      display:D=flex;
-      background-color: #9c8e42;
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-content: center;
-      align-items: center;
-      background-color: #84c8e4;
-    }
+  max-width: 1200px; 
+  width: 100%;
+}
+
+
+.movies-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  overflow-x: auto; 
+}
+
+.movies-table th,
+.movies-table td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+.content {
+  background-color: white;
+}
+
+.movies-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-show-api-marvel,
+.btn-show-api-colombia {
+  padding: 20px 150px;
+  background-color: red;
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .movies-table th,
+  .movies-table td {
+    padding: 8px; 
+  }
+
+  .btn-show-api-marvel,
+  .btn-show-api-colombia {
+    padding: 15px 30px; 
   }
 }

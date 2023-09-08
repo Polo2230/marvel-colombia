@@ -11,12 +11,15 @@
 <body>
     <div class="container">
         <div class="header">
-            <h2>Movies List</h2>
+        <button class = "btn-show-api-marvel" onclick="consultaMarvel()">
+        API MARVEL
+        </button>
+        <button class = "btn-show-api-colombia" onclick="">
+        API COLOMBIA
+        </button>
+        <p style="text-align:center;"><img src="./assets/logo_marvel.png" alt="logo_marvel"></p>
         </div>
         <div class="content">
-            <button class = "btn-show-list" onclick="consultaMarvel()">
-                Mostrar Peliculas 
-            </button>
             <div class="movies-table">
                 <table>
                     <thead>
@@ -28,8 +31,24 @@
                     </thead>
                     <tbody id="comicTable"></tbody>
                 </table>
-            </div>            
+            </div>       
         </div>
+        <footer>
+            <a href="https://github.com/Polo2230">
+                <img src="./assets/logo_polo.png" alt="logo_polo">
+            </a>
+            <a href="https://github.com/luisemecasa">
+                <img src="./assets/logo_lois.png" alt="logo_luis">
+            </a>
+            <a href="https://github.com/">
+                <img src="./assets/logo_github.png" alt="logo_github">
+            </a>
+            <a href="https://www.autonoma.edu.co/">
+                <img src="./assets/logo_uam.jpg" alt="logo_uam">
+            </a>
+             
+        </footer>
+        
     </div>
     
 
